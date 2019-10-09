@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script>
+
+function applyScripture() {
+    let name = document.getElementById('nameInputBox').value;
+
+    let scripture = "Proverbs 31:26 I, " + name + ", openeth [my] mouth" +
+        " with wisdom; and in [my] mouth is the law of kindness.";
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+
+</script>
+</head>
+<body>                             
+Please enter your name: <input type="text" id="nameInputBox">    
+
+<button type="button" onclick="applyScripture()">Verse</button>
+<div id="outputDiv"></div>
+</body>       
+</html>
