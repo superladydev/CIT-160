@@ -5,10 +5,10 @@
 <title>Convert quarts to liters</title>
 
 <script>
-/* Input: a Volume in quarts
- * Processing: convert the volume from quarts to liters
- * Output: the volume converted to liters
- */
+    /* Input: a Volume in quarts
+     * Processing: convert the volume from quarts to liters
+     * Output: the volume converted to liters
+     */
 function quartsToLiters() {
     // Read a volume in quarts from the user.
     let text = document.getElementById('quartsInputBox').value;
@@ -22,16 +22,18 @@ function quartsToLiters() {
     // Convert volume in quarts to liters.
     let u = q * v;
   
-    // Display the liters to the user.
+    // Display the rounded off liters to the user 
     document.getElementById('litersDiv').innerHTML = "The answer is " + u.toFixed(2) + " liters";
    
 }
 </script>
 </head>
 
-<body>                                         
-Enter a volume in quarts: <input type="text" id="quartsInputBox">
-<button type="button" onclick="quartsToLiters()">Convert</button>
-<div id="litersDiv"></div>                
+<body>
+    <h1>Marjorie's Volume Unit Converter</h1>
+    <br>
+    Enter a volume in quarts: <input type="text" id="quartsInputBox">
+    <button type="button" onclick="quartsToLiters()">Convert</button>
+    <div id="litersDiv"></div>                
 </body>       
 </html>
