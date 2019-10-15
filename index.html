@@ -1,1 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Distance</title>
+<script>
+function distance() {
+   
+    let b = parseFloat(document.getElementById('binputBox').value);
+    let e = parseFloat(document.getElementById('einputBox').value);
+    let g = parseFloat(document.getElementById('ginputBox').value);
+    
+    let diff = e-b;
+    let dist = diff / g;
+    
+    document.getElementById('outputDiv').innerHTML = "The mileage is " + dist+ " miles per gallon.";
+}
+</script>
+</head>
 
+<body>
+<h1>Marjorie's Distance Calculator </h1> 
+<br>  
+Please enter your odometer readings:<br><br>
+Beginning: <input type="text" id="binputBox" size="5">   
+Ending: <input type="text" id="einputBox" size="5">
+  <br>
+  <br>
+Gasoline used: <input type="text" id="ginputBox" size="5"> gallons 
+  <br>  
+  <br>
+<button type="button" onclick="distance()">Calculate</button> 
+<br><br>
+<div id="outputDiv"></div>  
+</body>
+</html>
