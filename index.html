@@ -1,36 +1,65 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Distance</title>
-<script>
-function distance() {
-   
-    let b = parseFloat(document.getElementById('binputBox').value);
-    let e = parseFloat(document.getElementById('einputBox').value);
-    let g = parseFloat(document.getElementById('ginputBox').value);
-    
-    let diff = e-b;
-    let dist = diff / g;
-    
-    document.getElementById('outputDiv').innerHTML = "The mileage is " + dist.toFixed(2) + " miles per gallon.";
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
 </head>
+  <script>
+    function calculate(){
+    let num1 = parseInt(document.getElementById('a').value);
+    let oprtr = document.getElementById('o').value;
+    let num2 = parseInt(document.getElementById('b').value);
+    let kidAns = parseInt(document.getElementById('x').value);
 
+    let message;  
+    let actualAns;
+    if (oprtr == '+'){
+     actualAns = num1 + num2;
+         if (kidAns == actualAns)
+          message = 'Correct! Good job!';
+         else
+          message = 'Incorrect! Keep trying';
+    }
+    else if (oprtr == '-'){
+     actualAns = num1 - num2;
+         if (kidAns == actualAns)
+          message = 'Correct! Good job!';
+         else
+          message = 'Incorrect! Keep trying';
+    }
+    else if (oprtr == '/'){
+     actualAns = num1 / num2;
+         if (kidAns == actualAns)
+          message = 'Correct! Good job!';
+         else
+          message = 'Incorrect! Keep trying';
+    }
+    else if (oprtr == '*'||'x'){
+     actualAns = num1 * num2;
+         if (kidAns == actualAns)
+          message = 'Correct! Good job!';
+         else
+          message = 'Incorrect! Keep trying';
+    }
+    
+    else {
+      alert("Please enter a valid operator like + , - , * , /");
+    }
+    document.getElementById("divoutput").innerHTML = message;
+   }
+  </script>
 <body>
-<h1>Marjorie's Distance Calculator </h1> 
-<br>  
-Please enter your odometer readings:<br><br>
-Beginning: <input type="text" id="binputBox" size="5">   
-Ending: <input type="text" id="einputBox" size="5">
-  <br>
-  <br>
-Gasoline used: <input type="text" id="ginputBox" size="5"> gallons 
-  <br>  
-  <br>
-<button type="button" onclick="distance()">Calculate</button> 
-<br><br>
-<div id="outputDiv"></div>  
+  <h3>Quiz yourself here!</h3><h4>(This calculator is for addition, subtraction, <br>multiplication and division only.)</h4>
+  Enter 1st number<br>
+   <input type=Text id="a" size="3">
+  <br>Arithmetic operator ( + , - , * or x ,  / ) <br>
+   <input type=Text id="o" size="1">
+  <br>Enter 2nd Number <br>
+   <input type=Text id="b" size="3">
+  <br>Enter your answer <br>
+   <input type=Text id="x" size="3"><br><br>
+  <button type="button" onclick="calculate()">Check your answer</button>  
+  <div id="divoutput"></div>
 </body>
 </html>
