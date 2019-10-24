@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <script>
+    function WhatToWear(){
+    let weather = document.getElementById('weatherInputBox').value;
+    let text;
+      switch (weather) {
+      case "hot":
+        text = "sandals";
+        break;
+      case "rain":
+        text = "galoshes";
+        break;
+      case "snow":
+        text = "boots";
+        break;
+      default:
+        text = "shoes";
+  }
+    document.getElementById("divoutput").innerHTML = "I suggest you wear " + text;
+    }
+  </script>
+<body>
+    
+    <br>
+    What is the weather look like today? 
+    <br>Choose below: 
+    <br> <input type=Text id="weatherInputBox" size="7"> 
+    <br>
+    <br> hot
+    <br> snow
+    <br> rain
+    <br> others
+    <br>
+    <br>
+  <button type="button" onclick="WhatToWear()">What to wear</button>  
+   
+  <div id="divoutput">
+</body>
+</html>
